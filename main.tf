@@ -25,12 +25,12 @@ provider "google" {
 // Getting started - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started
 terraform {
   backend "gcs" {
-    bucket = "symphony-core-bucket"
+    bucket                      = "symphony-core-bucket"
     impersonate_service_account = "symphony-service@symphony-core-358423.iam.gserviceaccount.com"
   }
   required_providers {
     google = {
-      source                      = "hashicorp/google"
+      source = "hashicorp/google"
     }
   }
 }
