@@ -25,14 +25,13 @@ provider "google-beta" {
 }
 
 terraform {
-  backend "gcs" {
-    required_providers {
-      google = {
-        source = "hashicorp/google"
-      }
-      google-beta = {
-        source = "hashicorp/google-beta"
-      }
+  backend "gcs" {}
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+    }
+    google-beta = {
+      source = "hashicorp/google-beta"
     }
   }
 }
