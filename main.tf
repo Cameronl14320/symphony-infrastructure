@@ -1,18 +1,56 @@
-terraform {
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "Symphony-Core"
+provider "google" {
+  alias = "impersonate"
 
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "symphony-infrastructure"
+  scopes = [
+    "https://www.googleapis.com/auth/cloud-platform",
+    "https://www.googleapis.com/auth/userinfo.email",
+  ]
+}
+
+data "google_service_account_access_token" "default" {
+  provider               = google.impersonate
+  target_service_account = var.service_account
+  scopes                 = ["userinfo-email", "cloud-platform"]
+  lifetime               = "1200s"
+}
+
+provider "google" {
+  access_token = data.google_service_account_access_token.default.access_token
+  project      = var.project_id
+}
+
+provider "google-beta" {
+  access_token = data.google_service_account_access_token.default.access_token
+  project      = var.project_id
+}
+
+terraform {
+  backend "gcs" {
+    required_providers {
+      google = {
+        source = "hashicorp/google"
+      }
+      google-beta = {
+        source = "hashicorp/google-beta"
+      }
     }
   }
 }
 
-# An example resource that does nothing.
-resource "null_resource" "example" {
-  triggers = {
-    value = "A example resource that does nothing!"
+resource "google_compute_instance" "vm_instance" {
+  name         = "symphony-instance"
+  machine_type = "e2-micro"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    # A default network is created for all GCP projects
+    network = "default"
+    access_config {
+    }
   }
 }
