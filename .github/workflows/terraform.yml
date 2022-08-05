@@ -80,12 +80,13 @@ jobs:
       name: Authenticate to GCP
       uses: 'google-github-actions/auth@v0.3.1'
       with:
+        create_credentials_file: 'true'
         workload_identity_provider: '//iam.googleapis.com/projects/570753805608/locations/global/workloadIdentityPools/symphony-pool/providers/github-provider'
         service_account: ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
     - id: 'gcloud'
       name: 'gcloud'
       run: |-
-        gcloud auth login --brief
+        gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
