@@ -76,6 +76,9 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
+    # Install and setup gcloud
+    # https://cloud.google.com/iam/docs/configuring-workload-identity-federation
+    # https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-google-cloud-platform
     - id: 'auth'
       name: Authenticate to GCP
       uses: 'google-github-actions/auth@v0.3.1'
