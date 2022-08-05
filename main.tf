@@ -1,3 +1,5 @@
+// Impersonation
+// https://cloud.google.com/blog/topics/developers-practitioners/using-google-cloud-service-account-impersonation-your-terraform-code
 provider "google" {
   alias = "impersonate"
 
@@ -19,19 +21,16 @@ provider "google" {
   project      = var.project_id
 }
 
-provider "google-beta" {
-  access_token = data.google_service_account_access_token.default.access_token
-  project      = var.project_id
-}
 
+// Getting started - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started
 terraform {
-  backend "gcs" {}
+  backend "gcs" {
+    bucket = "symphony-core-bucket"
+    impersonate_service_account = var.service_account
+  }
   required_providers {
     google = {
-      source = "hashicorp/google"
-    }
-    google-beta = {
-      source = "hashicorp/google-beta"
+      source                      = "hashicorp/google"
     }
   }
 }
