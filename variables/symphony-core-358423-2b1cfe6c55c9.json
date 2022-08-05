@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "symphony-core-358423",
+  "private_key_id": "2b1cfe6c55c93f9b47a59d25ec7200cc0f41546c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDZqVrxwywT+8Aw\nSaXk8KrO3aEY2beclB5xaZ+NOv+QRVzK6AML81cz2vUZhyVeLkOvz2y3UsyyaT1v\nKP+VCn6yvMzQZCm7s2Me7QlPIe+Qc5ax4O+6H4mBvpgCFnFSLAudTSslcblt0ni+\nfOyoaEZej7kOgAj9E9hyytjxzETkqslIZss/mMCBw67XF8nERRrNwIOW3L+SRCVq\n/+5eVIFAFNQuMbgu8WR7PhDWaTHU4HE4siAAlOzROdljWhEbkbCfE8TA3EMNk80T\ncCpyKoozQ5QckAnP2ep86HVY7tMYYiH3P23XUz7udM5zeRvpsulBTdhy7N/+aOhb\nlh4Ay/chAgMBAAECggEACB87LwlO5EIBJmwhHh1i6kw33jMFmHioeCfuVblNXwdP\nkpy8vF3ss5koizbRTKXiTbWqQ176F3A45CR+AQQ+vRGxfNc3/XKQsM88iTDlfRjr\nFyEjIOlbWrWPe4h12xCcsFZ4VTHcrv3rFoSX2iLl+VJYn/NkInlymrn6BW/PZE7v\nh5s1kPh0KxPHPh+ILLzS8Y3tdKEAZiqou8HgNTiD+hWBqu8OmNvWOCs5plFREgwE\n7b7btF0QgZbXLXiCLOtrm/n6/21H9zxhtKeBHqR1iNN9LFc28xZkcxIyx+klPDt3\nGX/zWns2NuSa5nSEFkKcQwfVwFEe3kazIvBdeRPfFwKBgQD305xv8h+X0Bau+jjg\nefnqDcAj8/iyEHHZPo+zzuIPtnS8aRJasToP4O/FLQM17HWeSLrydtNx+0+vQfn8\nYpukOQ5FMw/WBAoJ74+kDDbG9mQ7SMnj2IjwmVgdJ4lUa4Jyo40NHcKlXcenNXmC\n21dqYXf/kv3DTvCCMldfO7NKTwKBgQDg1w/Y9GMBEZH1P3PXuk28dgE1we79NiFX\nzVLDrwmi1RpVzOXW04/2OzU+QgdCKfBZN3xWtRDlEmJ3+zMAAMNTsqOs8XqgzP7a\n85i8m7K8j4Q4p8RWnJLROUhxg7yTNK2B5gl9GdAsebeyC1dRKbYLFMtZdfT0civ9\nhFF+FRb7jwKBgQDR6OT6VOS5m8F61+pRCD/MJXV3fnBJsnAcCEeDj1oe4PYjmAO5\n2Z9KT8YHBsdPZ0eAmC3wrQEP7ENkOMfbJFKcWM9jgYqKRcWTANxzoPzMrWncZRzL\n5l6nG9tsZk6FuMI3A5y3XVu+4Z34XOzdD5gNPR181i4mvbgtLyKeQVztNQKBgQCg\nKRJk3VFZBYcPSC/g0Bln0jdyb78qKFEAFoaKVjlrAJpN3DMtIG9AW1TGEIrTGsTX\nCKtNqJVsV/hEt2/Q5Lo++NWW8D0GJoC0vylh0Rc1MpZhNUCq4cXDvCZalhjSU4f1\nLEQ+FRExXVL5RRLiAfBnXFyuUVQ4fMvRP1w9kBBbCQKBgQChupSfCE7B7y2yQrpr\nGQS/V/Tqx0pmQF1zSKdsnHeByrROrNuOz4RGCwF9tbzp5+OwksSFokyTi858avTE\nokCLRoxUAG+CkzXU/SA2V5yvABPszRJ+59xuDZHbL75G6C+n9vDUDktizFnLFM8G\niqDDBuCX5SEjCmhFJflDMlcWyw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "symphony-service@symphony-core-358423.iam.gserviceaccount.com",
+  "client_id": "110745014394520066950",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/symphony-service%40symphony-core-358423.iam.gserviceaccount.com"
+}
