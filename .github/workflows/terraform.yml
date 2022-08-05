@@ -80,7 +80,7 @@ jobs:
       name: Authenticate to GCP
       uses: 'google-github-actions/auth@v0.3.1'
       with:
-        workload_identity_provider: 'projects/570753805608/locations/global/workloadIdentityPools/symphony-provider'
+        workload_identity_provider: '//iam.googleapis.com/projects/570753805608/locations/global/workloadIdentityPools/symphony-pool/providers/github-provider'
         service_account: ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
     - id: 'gcloud'
       name: 'gcloud'
