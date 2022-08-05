@@ -26,7 +26,7 @@ provider "google" {
 terraform {
   backend "gcs" {
     bucket = "symphony-core-bucket"
-    impersonate_service_account = var.service_account
+    impersonate_service_account = "symphony-service@symphony-core-358423.iam.gserviceaccount.com"
   }
   required_providers {
     google = {
