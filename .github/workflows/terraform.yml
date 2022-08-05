@@ -81,7 +81,7 @@ jobs:
       uses: 'google-github-actions/auth@v0.3.1'
       with:
         create_credentials_file: 'true'
-        workload_identity_provider: 'principalSet://iam.googleapis.com/projects/570753805608/locations/global/workloadIdentityPools/impersonation/*'
+        workload_identity_provider: '//iam.googleapis.com/projects/570753805608/locations/global/workloadIdentityPools/impersonation/*'
         service_account: ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
     - id: 'gcloud'
       name: 'gcloud'
