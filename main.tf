@@ -35,21 +35,18 @@ terraform {
   }
 }
 
-resource "google_compute_instance" "vm_instance" {
-  name         = "symphony-instance"
-  machine_type = "e2-micro"
-  zone         = "us-west1-a"
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-9"
+resource "google_cloud_run_service" "default" {
+  name     = "symphony-service"
+  location = "us-west1-a"
+  template {
+    spec {
+      containers {
+        image = "gcr.io/cloudrun/hello"
+      }
     }
   }
-
-  network_interface {
-    # A default network is created for all GCP projects
-    network = "default"
-    access_config {
-    }
+  traffic {
+    percent         = 100
+    latest_revision = true
   }
 }
