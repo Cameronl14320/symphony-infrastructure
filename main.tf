@@ -38,6 +38,7 @@ terraform {
 resource "google_compute_instance" "vm_instance" {
   name         = "symphony-instance"
   machine_type = "e2-micro"
+  zone = "us-west1-a"
 
   boot_disk {
     initialize_params {
