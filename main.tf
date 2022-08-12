@@ -39,13 +39,15 @@ terraform {
 resource "google_cloud_run_service" "default" {
   name     = "symphony-service"
   location = "us-west1" // https://cloud.google.com/run/docs/locations
+
   template {
     spec {
       containers {
-        image = "gcr.io/cloudrun/hello"
+        image = "us-docker.pkg.dev/cloudrun/container/hello"
       }
     }
   }
+
   traffic {
     percent         = 100
     latest_revision = true
