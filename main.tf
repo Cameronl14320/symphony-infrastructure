@@ -37,7 +37,7 @@ terraform {
 
 resource "google_cloud_run_service" "default" {
   name     = "symphony-service"
-  location = "us-west1-a"
+  location = "us-west1"
   template {
     spec {
       containers {
