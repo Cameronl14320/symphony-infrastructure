@@ -35,9 +35,10 @@ terraform {
   }
 }
 
+// https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_service
 resource "google_cloud_run_service" "default" {
   name     = "symphony-service"
-  location = "us-west1"
+  location = "us-west1" // https://cloud.google.com/run/docs/locations
   template {
     spec {
       containers {
